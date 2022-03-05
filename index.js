@@ -138,3 +138,9 @@ function validate_field(field) {
         return true
     }
 }
+
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        location.replace("./vesselfinder.html")
+    }
+})
